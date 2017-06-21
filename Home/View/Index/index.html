@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index.css">
+    <title>留言板</title>
+  </head>
+  <body>
+      <div>
+        <div id="mian">
+          <h1>留言板</h1>
+          <foreach name="list" item="message">
+          <div >
+            <span>{$message.username} &nbsp&nbsp&nbsp {$message['pubtime']|date="Y-m-d",###}</span>
+            <p>
+              {$message.content}
+            </p>
+          </div>
+        </foreach>
+        </div>
+        <span style="text-align:center">{$page}</span>
+        <div id="mian">
+        <div id="respond" class="comment-respond">
+          <h3>欢迎留言</h3>
+          <form class="" action="" method="post">
+            <p>昵称:<input type="text" name="username" value=""></p>
+            <p>QQ:<input type="text" name="qq" value=""></p>
+            <p>验证码:<input type="text" name="verify" value=""><img src="{:U('/Home/Index/vcode')}" style="vertical-align:middle" /></p>
+            <p><textarea name="content" rows="8" cols="52"></textarea></p>
+            <p><input type="submit"   value="提交"></p>
+          </form>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>

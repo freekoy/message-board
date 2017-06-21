@@ -1,0 +1,48 @@
+div{ margin:0 auto;
+  width:500px;
+  border:1px solid #000
+}
+
+#mian div {
+  margin-bottom: 10px;
+	padding: 10px 15px;
+	background: #FAFAFA;
+	color:#666;
+	font: 17px/normal '微软雅黑','黑体',sans-serif;
+  width: 400px;
+}
+
+#mian span {
+	border-bottom: 1px solid blue;
+	display:block;
+}
+
+#mian h1 {
+  text-align:center;
+}
+
+
+#respond {
+	background: #FFF;
+  float: inherit;
+}
+
+
+#respond h3 {
+	margin-bottom: 20px;
+	font: 20px/normal '微软雅黑','黑体',sans-serif;
+}
+
+#respond input {
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	color:#666;
+	border: 1px solid #ccc;
+	font: 17px/normal '微软雅黑','黑体',sans-serif;
+  vertical-align:middle;
+}
+#respond input[type=submit] {
+	margin-top: 10px;
+	background: #3F3F3F;
+	color: #FFF;
+}
