@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数组式留言本</title>
+</head>
+<style>
+.main {
+  width: 400px;
+  height: auto;
+  border: 1px solid black;
+}
+.msg {
+  width: 395px;
+  height: auto;
+  border: 1px solid black;
+}
+</style>
+<body>
+  <div class="main">
+
+  </div>
+  <input type="text" name='content' value="">
+  <input type="submit">
+</body>
+<script>
+  var main = document.getElementsByClassName('main')[0];
+  var content = document.getElementsByName('content')[0];
+  var submit = document.getElementsByTagName('input')[1];
+  var arr = new Array('你好,世界','老孙来也','这里是?','留言板');
+  submit.onclick = function() {
+    if(content.value != '') {
+      arr.push(content.value);
+    }
+    content.value = '';
+  }
+  function textdisplay() {
+    main.innerHTML = '';
+    for(var i = 0;i<arr.length;i++) {
+      var msg = document.createElement('div');
+      msg.className = 'msg';
+      msg.innerHTML = arr[i];
+      main.appendChild(msg);
+    }
+  }
+  textdisplay();
+  setInterval('textdisplay()',5000);
+</script>
+</html>
